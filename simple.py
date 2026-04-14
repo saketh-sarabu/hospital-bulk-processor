@@ -48,7 +48,7 @@ app = FastAPI(title="Hospital Bulk Processor")
 
 @app.post("/hospitals/bulk", response_model=BulkResponse)
 async def bulk_create_hospitals(file: UploadFile = File(...)) -> BulkResponse:
-    if file.filename and not file.filename.endswith(".csv"):
+    if not file.filename or not file.filename.endswith(".csv"):
         raise HTTPException(status_code=400, detail="Only .csv files are accepted.")
 
     contents = await file.read()
