@@ -4,7 +4,6 @@ version = "0.1.0"
 description = "Bulk CSV processing service for the Hospital Directory API"
 requires-python = ">=3.12"
 readme = "README.md"
-requires-python = ">=3.12"
 dependencies = [
     "fastapi==0.135.1",
     "uvicorn[standard]==0.42.0",
