@@ -60,3 +60,4 @@ AGENT.md
 uv.lock
 temp/
 z.py
+render.yaml

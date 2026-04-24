@@ -5,7 +5,7 @@ from app.config import MAX_CSV_HOSPITALS
 from app.schemas import BulkResponse
 from app.service import process_bulk
 
-router = APIRouter()
+router = APIRouter(tags=["Hospitals"])
 
 
 @router.post("/hospitals/bulk", response_model=BulkResponse)
